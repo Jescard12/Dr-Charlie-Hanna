@@ -37,6 +37,7 @@ section{padding:90px 0}.head{text-align:center;margin-bottom:46px}.head h2{font-
 .card{background:var(--card);border:1px solid color-mix(in srgb,var(--tan) 28%,transparent);border-radius:20px;padding:30px;transform-style:preserve-3d;transition:transform .2s,box-shadow .3s;box-shadow:0 14px 34px -18px rgba(0,0,0,.3)}
 .card:hover{box-shadow:0 34px 50px -20px rgba(0,0,0,.4)}.card h3{font-size:28px;margin:6px 0 12px;transform:translateZ(30px)}
 .card .n{font:600 14px Inter;color:var(--tan);letter-spacing:2px}.card ul{margin:0;padding:0;list-style:none;color:var(--mut);font-size:15px}.card li{padding:6px 0;border-bottom:1px dashed color-mix(in srgb,var(--tan) 35%,transparent)}
+.card.wide{grid-column:1/-1}.card.wide ul{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px}.card.wide .note{margin:16px 0 0;font-size:13px;letter-spacing:1px;color:var(--tan)}
 .about{background:var(--g);color:#f3eee4}.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
 .about img{width:100%;max-width:380px;aspect-ratio:1;object-fit:cover;object-position:50% 6%;border-radius:50%;border:8px solid rgba(255,255,255,.15);box-shadow:0 30px 50px -15px rgba(0,0,0,.5);margin:auto;display:block}
 .about h2{font-size:48px;margin-bottom:16px}.about p{opacity:.85}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.chips span{border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:7px 16px;font-size:13px}
@@ -62,7 +63,7 @@ input,select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid va
 footer{background:var(--g2);color:#d9d3c5;text-align:center;padding:40px 22px;font-size:13px}
 .wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 12px 30px -6px rgba(0,0,0,.5);z-index:20}
 @media(min-width:1400px){body{font-size:18px}.stage{transform:scale(1.2)}.about img{max-width:460px}.flip{height:680px}.ph{height:260px}}
-@media(max-width:860px){nav ul{display:none}.hero .wrap,.about .wrap,.bk{grid-template-columns:1fr}.grid,.res,.rev{grid-template-columns:1fr}.stage{height:420px;transform:scale(.85)}.flip{height:480px}.b1{left:-20px}.b2{right:-10px}}
+@media(max-width:860px){nav ul{display:none}.hero .wrap,.about .wrap,.bk{grid-template-columns:1fr}.grid,.res,.rev{grid-template-columns:1fr}.card.wide ul{grid-template-columns:1fr}.stage{height:420px;transform:scale(.85)}.flip{height:480px}.b1{left:-20px}.b2{right:-10px}}
 </style></head><body>
 <nav><div class="wrap"><a class="logo" href="#top">ch<small>DR. CHARLIE HANNA</small></a>
 <ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#results">Results</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#book">Locations</a></li></ul>
@@ -88,6 +89,7 @@ footer{background:var(--g2);color:#d9d3c5;text-align:center;padding:40px 22px;fo
 <div class="card tilt"><span class="n">01</span><h3>ENT Care</h3><ul><li>ENT consultation &amp; examination</li><li>Sinusitis &amp; chronic sinusitis</li><li>Endoscopic sinus surgery (FESS)</li><li>Deviated septum &amp; nasal obstruction</li><li>Nasal polyps &amp; tonsillitis</li><li>Ear care &amp; hearing assessment</li></ul></div>
 <div class="card tilt"><span class="n">02</span><h3>Facial Plastic Surgery</h3><ul><li>Rhinoplasty</li><li>Functional rhinoplasty</li><li>Septorhinoplasty</li><li>Otoplasty (ear surgery)</li><li>Blepharoplasty (eyelids)</li><li>Facial plastic consultation</li></ul></div>
 <div class="card tilt"><span class="n">03</span><h3>Aesthetic Treatments</h3><ul><li>Botox, including underarm</li><li>Dermal &amp; lip fillers</li><li>Jawline &amp; chin fillers</li><li>Liquid rhinoplasty</li><li>Under-eye treatment</li><li>Fat dissolving &amp; exosome therapy</li></ul></div>
+<div class="card wide"><span class="n">04</span><h3>Wellness &amp; Skin Care</h3><ul><li>Dietitian consultation</li><li>Physiotherapy consultation</li><li>Skin therapy session</li></ul><p class="note">Available at Waterfront, Dbayeh only</p></div>
 </div></div></section>
 
 <section id="results" style="background:var(--cream)"><div class="wrap"><div class="head"><div class="eyebrow">Results</div><h2>Before &amp; after</h2><p>Hover or tap a card. Individual results vary.</p></div>
@@ -107,12 +109,12 @@ footer{background:var(--g2);color:#d9d3c5;text-align:center;padding:40px 22px;fo
 <section class="book" id="book"><div class="wrap"><div class="head"><div class="eyebrow">Appointments</div><h2>Book via WhatsApp</h2><p>Choose your details and we’ll open WhatsApp with your request ready to send.</p></div>
 <div class="bk">
 <form id="f"><div><label>Full name</label><input id="n" required placeholder="Your name"></div>
-<div><label>Service</label><select id="s"><option>ENT consultation</option><option>Rhinoplasty consultation</option><option>Functional rhinoplasty / septorhinoplasty</option><option>Sinus treatment</option><option>Botox / Fillers</option><option>Other</option></select></div>
+<div><label>Service</label><select id="s"><option>ENT consultation</option><option>Rhinoplasty consultation</option><option>Functional rhinoplasty / septorhinoplasty</option><option>Sinus treatment</option><option>Dietitian consultation</option><option>Physiotherapy consultation</option><option>Skin therapy session</option><option>Botox / Fillers</option><option>Other</option></select></div>
 <div><label>Location</label><select id="l"><option>Waterfront, Dbayeh</option><option>Eye &amp; Ear Hospital, Naccache</option><option>Zalaqet Bldg, Zahle</option></select></div>
 <div class="r2"><div><label>Date</label><input id="d" type="date" required></div><div><label>Time</label><select id="t" required></select></div></div>
 <button class="btn" type="submit">Send request on WhatsApp</button></form>
 <div class="loc">
-<div class="card"><h3>Waterfront, Dbayeh</h3><p>Main clinic<br>Mon 3–7 PM · Wed 10 AM–6 PM · Fri 10 AM–6 PM</p><a class="btn o" target="_blank" rel="noopener" href="https://maps.app.goo.gl/H3rfmX9SQG25256K9">Open in Maps</a></div>
+<div class="card"><h3>Waterfront, Dbayeh</h3><p>Main clinic · also dietitian, physiotherapy &amp; skin therapy<br>Mon 3–7 PM · Wed 10 AM–6 PM · Fri 10 AM–6 PM</p><a class="btn o" target="_blank" rel="noopener" href="https://maps.app.goo.gl/H3rfmX9SQG25256K9">Open in Maps</a></div>
 <div class="card"><h3>Eye &amp; Ear Hospital, Naccache</h3><p>Hospital consultations &amp; surgery<br>Hours confirmed on WhatsApp</p><a class="btn o" target="_blank" rel="noopener" href="https://maps.app.goo.gl/tkRgHZ67ZMLRRBu48">Open in Maps</a></div>
 <div class="card"><h3>Zalaqet Bldg, Zahle</h3><p>Bekaa clinic<br>Saturday 1–7 PM</p><a class="btn o" target="_blank" rel="noopener" href="https://maps.app.goo.gl/QyqHfbtzDvbpYYiz9">Open in Maps</a></div>
 </div></div></div></section>
@@ -136,6 +138,9 @@ if(!t.options.length){t.add(new Option(h&&!h[dow]?"Closed that day":"No slots le
 $("d").setCustomValidity(h&&!h[dow]?"The clinic is closed on this day at this location.":"")}
 function nxt(){var h=H[$("l").value];if(h){var c=new Date($("d").value+"T12:00:00");for(var i=0;i<8&&!h[c.getDay()];i++)c.setDate(c.getDate()+1);$("d").value=c.getFullYear()+"-"+pad(c.getMonth()+1)+"-"+pad(c.getDate())}refresh()}
 $("l").addEventListener("change",nxt);$("d").addEventListener("change",refresh);nxt();
+var WO=["Dietitian consultation","Physiotherapy consultation","Skin therapy session"];
+function svc(){var w=WO.indexOf($("s").value)>-1,l=$("l");for(var i=0;i<l.options.length;i++){l.options[i].disabled=w&&l.options[i].value!=="Waterfront, Dbayeh"}if(w)l.value="Waterfront, Dbayeh";nxt()}
+$("s").addEventListener("change",svc);
 document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();if(!$("t").value){alert("Please choose an available date and time.");return}
 var v=function(i){return document.getElementById(i).value};
 var m="Hello Dr. Hanna, I’d like to book an appointment.\nName: "+v("n")+"\nService: "+v("s")+"\nLocation: "+v("l")+"\nDate: "+v("d")+"\nTime: "+v("t");
